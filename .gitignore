@@ -1,0 +1,9 @@
+# IDE
+.idea/
+.vscode/
+
+# Generated dir
+node_modules
+
+# Environment
+.env
