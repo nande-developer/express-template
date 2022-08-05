@@ -1,16 +1,16 @@
-#name: Deploy to Staging
-#
-#on:
-#  push:
-#    branches: [ develop ]
-#
-#jobs:
-#  build:
-#    runs-on: ubuntu-latest
-#
-#    steps:
-#      - uses: actions/checkout@v2
-#
+name: Deploy to Staging
+
+on:
+  push:
+    branches: [ develop ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
 #      - name: ssh-pipeline
 #        uses: cross-the-world/ssh-pipeline@v1.2.0
 #        with:
