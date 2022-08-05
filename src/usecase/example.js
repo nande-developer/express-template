@@ -1,7 +1,7 @@
-class ExampleService {
+class ExampleUsecase {
   async example(param = null) {
     return param ? `Hello ${param}` : 'Hello guys';
   }
 }
 
-module.exports = new ExampleService();
+module.exports = new ExampleUsecase();

@@ -4,8 +4,8 @@ const path = require('path');
 const expressUpload = require('express-fileupload');
 const cors = require('cors');
 
-const ErrorMiddleware = require('./middlewares/error');
-const indexRouter = require('./routes/index');
+const {HTTPErrorMiddleware} = require('@nandev/ndk');
+const indexRouter = require('./routes');
 
 const app = express();
 
@@ -21,6 +21,6 @@ app.use(expressUpload({
 }));
 
 app.use('/', indexRouter);
-app.use(ErrorMiddleware.handleMiddleware);
+app.use(HTTPErrorMiddleware.handleMiddleware);
 
 module.exports = app;

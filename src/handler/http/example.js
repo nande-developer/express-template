@@ -1,10 +1,10 @@
-const BaseHandler = require('./base');
+const {HTTPBaseHandler} = require('@nandev/ndk');
 
-const ExampleValidator = require('../validators/example')
+const ExampleValidator = require('../../validator/example')
 
-const ExampleService = require('../services/example');
+const ExampleService = require('../../usecase/example');
 
-class ExampleHandler extends BaseHandler {
+class ExampleHandler extends HTTPBaseHandler {
   handleExample(req, res) {
     const validateData = ExampleValidator.validateExample(req)
     
