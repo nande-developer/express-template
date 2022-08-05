@@ -1,6 +1,6 @@
 const Joi = require("joi");
 
-const BaseValidator = require('./base');
+const {BaseValidator} = require('@nandev/ndk');
 
 class ExampleValidator extends BaseValidator {
   validateExample(req) {

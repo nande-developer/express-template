@@ -1,6 +1,6 @@
-const BaseHandler = require('../handlers/base');
+const {HTTPBaseHandler} = require('@nandev/ndk');
 
-class AuthMiddleware extends BaseHandler{
+class AuthMiddleware extends HTTPBaseHandler{
   handleMiddleware(req, res, next) {
     const {authorization} = req.headers;
     if (authorization) {
